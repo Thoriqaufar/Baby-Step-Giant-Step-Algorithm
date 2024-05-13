@@ -2,11 +2,6 @@
 
 The Baby Step Giant Step algorithm, also known as the Shanks' algorithm, is an efficient method used for computing discrete logarithms in a cyclic group. It's particularly useful in the context of modular arithmetic, cryptography, and number theory.
 
-is to find an integer 𝑥 {\displaystyle x} such that
+This algorithm can find 𝑥 that satisfies the equation 𝛼^𝑥 = 𝛽.
 
-𝛼
-𝑥
-=
-𝛽
-.
-{\displaystyle \alpha ^{x}=\beta \,.}
+The time complexity of this algorithm is O(n^(1/2)), which makes it significantly faster than naive approaches for computing discrete logarithms, especially for large groups.
