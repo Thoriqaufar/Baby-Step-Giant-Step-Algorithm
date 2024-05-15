@@ -29,26 +29,3 @@ def decrypt(ciphertext, Key):
     plaintext = ''.join(decryptASCII)
 
     return(plaintext)
-
-def textToArray(inputText):
-    inputText = inputText.strip('[] ')
-    splitInputText = inputText.split('), ')
-
-    ciphertextArr = []
-
-    for stringInputText in splitInputText:
-        x, y = stringInputText.strip('()').split(', ')
-        ciphertextArr.append((int(x), int(y)))
-
-    return(ciphertextArr)
-
-input_message = 'THORIQ'
-kunci = 334
-
-# enkripsi
-ciphertext = encrypt(input_message, kunci)
-print("Ciphertext :", ciphertext)
-
-# dekripsi
-decryptedCt = decrypt(ciphertext, kunci)
-print("Decrypted Ciphertext :", decryptedCt)
