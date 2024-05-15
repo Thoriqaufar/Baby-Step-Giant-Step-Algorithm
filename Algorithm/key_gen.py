@@ -58,27 +58,3 @@ def secretKeyGenerator(privateKeyA, publicKeyB, prime):
     secretKey = squareAndMultiply(publicKeyB, privateKeyA, prime)
 
     return(secretKey)
-
-minVal = 100
-maxVal = 1000
-
-q = primeGenerator()
-a = findBigPrimitiveRoot(q)
-
-privateKey = privateKeyGenerator(q)
-Xa = privateKey[0]
-Xb = privateKey[1]
-
-publicKey = publicKeyGenerator(a, Xa, Xb, q)
-Ya = publicKey[0]
-Yb = publicKey[1]
-
-secretKey = secretKeyGenerator(Xa, Yb, q)
-
-print("q =", q)
-print("a =", a)
-print("Xa =", Xa)
-print("Xb =", Xb)
-print("Ya =", Ya)
-print("Yb =", Yb)
-print("K =", secretKey)
