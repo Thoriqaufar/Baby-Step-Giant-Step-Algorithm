@@ -47,20 +47,3 @@ def calcSK(publicKey, privateKey, q):
     secretKey = squareAndMultiply(publicKey, privateKey, q)
 
     return(secretKey)
-
-q = 922615262936663
-a = 849545799838169
-publicKey = 827474071641716
-publicKey2 = None
-
-session_start = time.time()
-
-privateKey = babyStepGiantStep(q, a, publicKey)
-print(privateKey)
-
-# secretKey = calcSK(publicKey2, privateKey, q)
-# print(secretKey)
-
-session_end = time.time()
-
-print("Execution time", session_end - session_start, "secs")
